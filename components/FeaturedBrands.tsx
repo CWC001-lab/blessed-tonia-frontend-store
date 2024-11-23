@@ -15,6 +15,8 @@ import saro from "../assets/saro.jpg";
 import syngenta from "../assets/syngenta.jpg";
 import yara from "../assets/yara.jpg";
 
+// import tutorial from "@/assets/video/tutorial.mp4";
+
 const brands = [
 
   { name: 'Agro Alied', logo: agroalied },
@@ -36,10 +38,12 @@ const brands = [
 
 ];
 
+
+
 const FeaturedBrands = () => {
   return (
     <div className="py-16 bg-white">
-      <h2 className="text-3xl font-bold text-center text-white mb-8">Featured Brands</h2>
+      <h2 className="text-3xl font-bold text-center text-black mb-8">Featured Brands</h2>
       <div className="overflow-hidden">
         <div className="flex animate-slide-left">
           {brands.concat(brands).map((brand, index) => (
@@ -71,6 +75,22 @@ const FeaturedBrands = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Video Walkthrough Section */}
+      <div className="mt-16 text-center">
+        <h2 className="text-3xl font-bold mb-4">How to Use Our Site</h2>
+        <video
+          controls
+          autoPlay
+          muted
+          className="mx-auto"
+          width="600"
+          height="10" // Adjust width as needed
+        >
+          <source src="/tutorial.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   );
